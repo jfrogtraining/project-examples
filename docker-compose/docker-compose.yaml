@@ -6,14 +6,14 @@ services:
     ports: ['5432:5432']
     environment: [POSTGRES_DB=artifactory, POSTGRES_USER=artifactory, POSTGRES_PASSWORD=password]
   artifactory:
-    image: docker.bintray.io/jfrog/artifactory-pro:6.2.0
+    image: docker.bintray.io/jfrog/artifactory-pro:6.1.0
     container_name: artifactory_pro
     ports: ['8082:8081']
     depends_on: [postgresql]
     links: [postgresql]
     environment: [DB_TYPE=postgresql, DB_USER=artifactory, DB_PASSWORD=password]
   nginx:
-    image: docker.bintray.io/jfrog/nginx-artifactory-pro:6.2.0
+    image: docker.bintray.io/jfrog/nginx-artifactory-pro:6.1.0
     container_name: artifactory_pro_nginx
     ports: ['80:80']
     depends_on: [artifactory]
