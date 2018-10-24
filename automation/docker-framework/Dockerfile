@@ -1,4 +1,4 @@
-FROM jfrog.local:5000/ubuntu:latest
+FROM docker-virtual.jfrog.team/ubuntu:latest
 
 MAINTAINER Stanley Fong stanleyf@jfrog.com
 
